@@ -6,8 +6,10 @@ In order to preserve academic integrity, these will be uploaded after final subm
 
 I'll have the projects under the category of the course that they were assigned under.
 
-List of courses (so far):
-  CSE 20 - Intro to computing I (Java) (Completed)
-  CSE 21 - Intro to computing II (Java) (In progress)
+List of courses (so far)
+
+1.CSE 20 - Intro to computing I (Java) (Completed)
+
+2.CSE 21 - Intro to computing II (Java) (In progress)
   
   
