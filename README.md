@@ -10,6 +10,6 @@ List of courses (so far)
 
 1.CSE 20 - Intro to computing I (Java) (Completed)
 
-2.CSE 21 - Intro to computing II (Java) (In progress)
+2.CSE 21 - Intro to computing II (Java) (Completed)
   
   
