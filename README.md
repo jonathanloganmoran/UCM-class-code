@@ -12,4 +12,4 @@ List of courses (so far)
 
 2.CSE 21 - Intro to computing II (Java) (Completed)
   
-  
+3. CSE 30 - Data Structures (C++) (In Progress)
