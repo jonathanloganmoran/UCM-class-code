@@ -1,0 +1,10 @@
+Pseudo code for array2.cpp
+
+S <--- We want to reverse this string
+Length <--- length of S
+
+for i <-- Length-1 to 0, do
+	print S[i] // print characters starting from last char onto the same line
+end for // answer was printed chars inside for loop
+
+exit program

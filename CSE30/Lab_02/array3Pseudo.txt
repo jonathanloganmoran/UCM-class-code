@@ -1,0 +1,26 @@
+Pseudo code for array3.cpp
+
+S <--- size of 2D array
+
+TwoD <--- new 2D array of S rows and S columns
+
+Neg <--- counter for negative values
+
+for i <-- 0 to S, do
+	for j <-- 0 to S, do
+		TwoD[i][j] = user input
+		if user input < 0, then
+			increment Neg by 1
+		end if
+	end for
+end for
+
+if neg == 0, then
+	All values are non-negative
+	exit program
+end if
+
+else
+	number of negative values is Neg
+	exit program
+end else

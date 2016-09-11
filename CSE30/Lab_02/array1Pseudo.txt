@@ -1,1 +1,22 @@
 Pseudocode for array1.cpp
+
+Array size <--- integer for the array size value
+if Array size is < 1
+	error message
+	exit program
+end if
+
+A <--- new array of array size integers
+for i starting at 2nd index to last index of A, do
+	Prev <--- value for previous index
+	Curr <--- value for current index
+	if Prev > Curr then
+		Not an increasing array
+		stop the loop
+	end if
+	if i reaches last index then
+		this is an increasing array
+	end if
+end for
+
+exit program
