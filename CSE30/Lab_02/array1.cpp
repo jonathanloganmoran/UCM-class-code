@@ -6,7 +6,7 @@ int main()
     cout << "Enter the size of the array" << endl;
     cin >> arrSize; // asking input for array size
 
-    if (cin.fail() || arrSize < 1) { // if input is NOT an integer OR a negative integer, then error
+    if (arrSize < 1) { // if input is negative integer, then error
         cout << "ERROR: you entered an incorrect value for the array size!" << endl;
         return 0;
     }
