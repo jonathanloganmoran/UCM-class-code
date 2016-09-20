@@ -16,19 +16,19 @@ int main()
         cin >> array[i]; // user input assigned to current index space
     }
 
-    for (int i = arrSize-1; i >= 0; i--) { // decrement i starting from n-1 to 1
-	int idxMax = 0; // temp max index
-	for (int j = 0; j <= i; j++) { // increment j starting from 1 to i
+    for (int i = 0; i <= arrSize - 1; i++) { // increment i to n-1
+	int idxMin = arrSize - 1; // temp min index
+	for (int j = arrSize - 2; j >= i; j--) { // decrement j frmo n - 1 to i
 	    int currVal = array[j]; // get current value
-	    if (currVal > array[idxMax]) { // if current value is bigger than max
-		idxMax = j; //update index of temp max
+	    if (currVal < array[idxMin]) { // if current value is less than min
+		  idxMin = j; //update index of temp min
 	    }
 	}
 
-	if (idxMax != i) { // if they are not the same
+	if (idxMin != i) { // if they are not the same
 	    int temp1 = array[i];
-	    int temp2 = array[idxMax];
-	    array[idxMax] = temp1; // swap the values
+	    int temp2 = array[idxMin];
+	    array[idxMin] = temp1; // swap the values
 	    array[i] = temp2;
 	}
     }
@@ -38,7 +38,7 @@ int main()
 	cout << array[i] << " ";
     }
     cout << endl;
-    cout << "The algorithm selected the maximum for the traverse of the array" << endl;
+    cout << "The algorithm selected the minimum for the traverse of the array" << endl;
 
     return 0;
 }
