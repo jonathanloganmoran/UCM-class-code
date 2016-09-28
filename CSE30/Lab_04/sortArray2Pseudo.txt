@@ -1,0 +1,28 @@
+Algorithm sortArray1(A, n, ascending)
+	A <--- array of n integers
+	n <--- size of array A
+	ascending <--- boolean for whether to sort ascending(0) or ascending(1)
+	if ascending 
+		for i <-- i to n-1 do
+			saved <-- A[i]
+			j <-- i
+			while j > 0 AND A[j-1] > saved do 
+				A[j] <-- A[j-1]
+				j <-- j-1
+			end while
+			A[j] = saved
+		endfor
+	endif
+
+	else for descending
+		for i <-- i to n-1 do
+			saved <-- A[i]
+			j <-- i
+			while j > 0 AND A[j-1] < saved do 
+				A[j] <-- A[j-1]
+				j <-- j-1
+			end while
+			A[j] = saved
+		endfor
+	end else
+end Algorithm
