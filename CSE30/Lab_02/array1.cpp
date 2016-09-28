@@ -17,15 +17,15 @@ int main()
     }
     for (int i = 1; i < arrSize; i++) {
         int prev = array[i-1]; // get previous value
-	int curr = array[i]; // get current indexed value
-	if (prev > curr) { // check if previous is greater than current value
-	    cout << "This is NOT an increasing array!" << endl;
-	    break;
-	}
-	if (i == arrSize-1) { // if we are at last index
-	    // this is an increasing array because each value is greater than previous one
-	    cout << "This IS an increasing array!" << endl;
-	}
+        int curr = array[i]; // get current indexed value
+    	if (prev > curr) { // check if previous is greater than current value
+    	    cout << "This is NOT an increasing array!" << endl;
+    	    break;
+    	}
+    	if (i == arrSize-1) { // if we are at last index
+    	    // this is an increasing array because each value is greater than previous one
+    	    cout << "This IS an increasing array!" << endl;
+    	}
     }
 
     return 0;

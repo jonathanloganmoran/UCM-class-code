@@ -13,7 +13,7 @@ int main()
     cout << "The reverse of the string is: " << endl;
 
     for (int i = strLength-1; i >= 0 ; i--) {
-	cout << str[i]; //print characters starting from last char of input string
+	   cout << str[i]; //print characters starting from last char of input string
     }
     cout << endl;
     return 0;
