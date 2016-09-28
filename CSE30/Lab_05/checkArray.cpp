@@ -5,7 +5,7 @@ using namespace std;
 int checkArraySort(string* array, int arr_size) {
 
 
-    //Todo: check is increasing
+    //Todo: check if increasing
     for (int i = 1; i < arr_size; i++) {
         string prev = array[i-1]; // get previous value
         string curr = array[i]; // get current indexed value
@@ -18,6 +18,8 @@ int checkArraySort(string* array, int arr_size) {
         }
     }
 
+
+    //Todo: check if decreasing
     for (int i = 1; i < arr_size; i++) {
         string prev = array[i-1]; // get previous value
         string curr = array[i]; // get current indexed value
@@ -42,10 +44,10 @@ int main()
     string line;
     int count = 0; // this is for finding the number of lines in a text file.
     if ( file_in.is_open() ) {
-    while (!file_in.eof()) {
-        getline(file_in, line);
-        count++;
-    }
+        while (!file_in.eof()) {
+            getline(file_in, line);
+            count++;
+        }
     }
     file_in.close();
 
@@ -73,7 +75,6 @@ int main()
     if (result == 0) {
         cout << "The array is not sorted!" << endl;
     }
-
 
 
 return 0;
