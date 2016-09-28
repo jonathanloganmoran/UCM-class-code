@@ -1,0 +1,32 @@
+Algorithm sortArray1(A, n, ascending)
+	A <--- array of n integers
+	n <--- size of array A
+	ascending <--- boolean for whether to sort ascending(0) or ascending(1)
+	if ascending 
+		for i = n-1 to 0:
+			max_index = 0
+			for j = 1 to i:
+				if (A[j] > A[max_index]):
+					max_index = j
+				endif
+			endfor
+			if (max_index i != i):
+				swap A[max_index] and A[i]
+			endif
+		endfor
+	endif
+
+	else for descending
+		for i = n-1 to 0:
+			min_index = 0
+			for j = 1 to i:
+				if (A[j] < A[min_index]):
+					min_index = j
+				endif
+			endfor
+			if (min_index i != i):
+				swap A[min_index] and A[i]
+			endif
+		endfor
+	end else
+end Algorithm

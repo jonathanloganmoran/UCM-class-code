@@ -6,7 +6,7 @@ string combineStr(string str, int num)
 {
     string output = "";
     for (int i = 0; i < num; i++) {
-	output += str; // concatenate string num amount of times
+	   output += str; // concatenate string num amount of times
     }
     return output;
 }

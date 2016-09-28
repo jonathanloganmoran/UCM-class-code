@@ -15,22 +15,22 @@ int main()
     for (int i = 0; i < arrSize; i++) {
         cin >> array[i]; // user input assigned to current index space
     }
-
+    
     for (int i = arrSize-1; i >= 0; i--) { // decrement i starting from n-1 to 1
 	int idxMax = 0; // temp max index
-	for (int j = 0; j <= i; j++) { // increment j starting from 1 to i
-	    int currVal = array[j]; // get current value
-	    if (currVal > array[idxMax]) { // if current value is bigger than max
-		idxMax = j; //update index of temp max
-	    }
-	}
+    	for (int j = 0; j <= i; j++) { // increment j starting from 1 to i
+    	    int currVal = array[j]; // get current value
+    	    if (currVal > array[idxMax]) { // if current value is bigger than max
+    		idxMax = j; //update index of temp max
+    	    }
+    	}
 
-	if (idxMax != i) { // if they are not the same
-	    int temp1 = array[i];
-	    int temp2 = array[idxMax];
-	    array[idxMax] = temp1; // swap the values
-	    array[i] = temp2;
-	}
+    	if (idxMax != i) { // if they are not the same
+    	    int temp1 = array[i];
+    	    int temp2 = array[idxMax];
+    	    array[idxMax] = temp1; // swap the values
+    	    array[i] = temp2;
+    	}
     }
 
     cout << "This is the sorted array in ascending order: ";

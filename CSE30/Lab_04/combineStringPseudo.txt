@@ -1,1 +1,19 @@
 Pseudo code for combineString.cpp
+
+Algorithm combineString(inputStr, number)
+
+	string output <--- an empty string
+
+	for i <-- 0 to number do
+		output <-- append with inputStr
+	endfor
+
+	output is the answer
+end algorithm
+
+Algorithm main()
+	inputStr <--- user input string
+	"Enter a string"
+	numTimes <--- user input number of times
+	Answer is output of combineString(inputStr, numTimes)
+end main()

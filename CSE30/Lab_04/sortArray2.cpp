@@ -3,7 +3,7 @@ using namespace std;
 
 void sortArr(int A[], int array_size, bool ascending) {
     if (ascending == 0) {
-        for (int i = 1; i < array_size-1; i++) {
+        for (int i = 1; i <= array_size-1; i++) {
             int saved = A[i];
             int j = i;
             while (j > 0 && A[j-1] > saved) { // while j is positive and previous is greater than saved
@@ -16,9 +16,10 @@ void sortArr(int A[], int array_size, bool ascending) {
         for (int i = 0; i < array_size; i++) {
             cout << A[i] << " ";
         }
+        cout << endl;
     }
     else {
-        for (int i = 1; i < array_size-1; i++) {
+        for (int i = 1; i <= array_size-1; i++) {
             int saved = A[i];
             int j = i;
             while (j > 0 && A[j-1] < saved) { // while j is positive and previous is less than saved
@@ -31,6 +32,7 @@ void sortArr(int A[], int array_size, bool ascending) {
         for (int i = 0; i < array_size; i++) {
             cout << A[i] << " ";
         }
+        cout << endl;
     }
 }
 int main()
