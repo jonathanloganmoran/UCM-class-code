@@ -18,7 +18,6 @@ int checkArraySort(string* array, int arr_size) {
         }
     }
 
-
     //Todo: check if decreasing
     for (int i = 1; i < arr_size; i++) {
         string prev = array[i-1]; // get previous value

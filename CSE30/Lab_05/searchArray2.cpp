@@ -3,18 +3,25 @@
 #include <string>
 using namespace std;
 
-int binarySearchR(string* Arr, int first, int last, string value) {
-	if (first > last) {
-		return -1;
-	}
-	int middle = (first + last) / 2;
-	if ( Arr[middle] == value ) { // if we find the value at the 
-		return middle; // return middle index
-	} else if (Arr[middle] < value) { // else if the middle value is smaller than desired value
-		return binarySearchR(Arr, middle + 1, last, value); // search again starting at the beginning of the right half of Arr
-	} else { // else the middle val is > desired value, so we look to the left half of Arr
-		return binarySearchR(Arr, first, middle-1, value);
-	}
+int binarySearchL(string* Arr, int size, string value) {
+	int first = 0;
+    int last = size-1;
+
+    while (first <= last) {
+        int middle = (first + last)/2;
+        if (Arr[middle] < value) { // if middle is less than value
+            //look to the right
+            first = middle+1;
+            middle = (first + last) / 2;
+        } else if (Arr[middle] > value) { // if middle is greater than value
+            //look to the left
+            last = middle-1;
+            middle = (first + last) / 2;
+        } else if (Arr[middle] == value) {
+            return middle;
+        }
+    }
+    return -1;
 }
 int checkArraySort(string* array, int arr_size) {
 
@@ -88,7 +95,7 @@ int main()
     string searchVal;
     cin >> searchVal;
 
-    int idxFound = binarySearchR(arr, 0, count-1, searchVal);
+    int idxFound = binarySearchL(arr, count, searchVal);
 
     if (idxFound == -1) {
     	cout << "Value of " << "\"" << searchVal << "\" not found in the array." << endl;
@@ -100,3 +107,5 @@ int main()
 return 0;
 
 }
+
+

@@ -1,0 +1,15 @@
+binarySearchL(Arr, first, last, value) {
+	while first <= last {
+		middle <-- (first + last) / 2
+		if value == Arr[middle] {
+			return middle;
+		}
+		else if value > Arr[middle] {
+			first <-- middle + 1;
+		}
+		else {
+			last <-- middle - 1;
+		}
+	}
+	return -1
+}

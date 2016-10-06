@@ -1,0 +1,12 @@
+binarySearchR(Arr, first, last, value) {
+	if (first > last) 
+		return -1
+	middle = (first + last) / 2;
+	if (Arr[middle] == value) {
+		return middle;
+	} else if (Arr[middle] < value) {
+		return binarySearchR(Arr, middle+1, last, value);
+	} else { // Arr[middle] > value
+		return binarySearchR(Arr, first, middle-1, value);
+	}
+}
