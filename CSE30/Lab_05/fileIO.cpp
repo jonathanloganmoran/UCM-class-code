@@ -21,7 +21,7 @@ int main()
     if ( file_in.is_open() ) {
     	while ( !file_in.eof() ) {
     	    for (int i = 0; i < count; i++) {
-    		getline(file_in, arr[i]);
+    		    getline(file_in, arr[i]);
     	    }
     	}
     }
