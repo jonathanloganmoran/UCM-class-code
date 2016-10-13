@@ -5,7 +5,7 @@
 %    the disk, and the 
 %    in?nite sheet, 
 %in the same ?gure, in the form of |E| vs. distance (r) plots. 
-%Use a range of distance that demonstrates the maximum possible variation of the ?eld as a function of distance.
+%Use a range of distance that demonstrates the maximum possible variation of the field as a function of distance.
 
 q = 8;                                              %Charge of a point in coulombs
 Q = 50 * 10^-9;                                     %Charge of a line segment and disk in coulombs
@@ -25,6 +25,8 @@ hold on
 plot(r, UniDiskEfield, 'r-')
 hold on
 plot(r, infinitePlaneEfield, 'b*')
-
-
+title('Electric Field for Sheets of Charge')
+ylabel('|E|, N/C')
+xlabel('z, m')
+legend('Point Charge', 'Disk', 'Infinite Plane')
 

@@ -10,4 +10,3 @@ Q_density = Q/(pi*R^2); % charge density of a disk
 eps = (8.85*10^-12); % permittivity of free space constant
 magn = (Q_density/(2*eps)) * (1-1./(sqrt(1+(R^2./z.^2))));
 return
-

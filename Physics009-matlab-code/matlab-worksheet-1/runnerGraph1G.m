@@ -29,12 +29,9 @@ hold on
 plot(r, lineSegEfield, 'r-')
 hold on
 plot(r, infiniteLineEfield, 'b-')
-
-
-
-
-
-
-
+title('Electric Field for Lines of Charge')
+ylabel('|E|, N/C')
+xlabel('r, m')
+legend('Point Charge', 'Line Segment', 'Infinite Line')
 
 

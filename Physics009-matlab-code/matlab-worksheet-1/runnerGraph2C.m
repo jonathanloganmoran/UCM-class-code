@@ -17,7 +17,7 @@ A2 = 3;
 A3 = 12;
 A4 = 7;
 
-theta = 0:pi/6:2*pi;                            %angle in radians (x-axis)
+theta = 0:0.1:2*pi;                            %angle in radians (x-axis)
 
 curve1 = calcFlux(E1, A1, theta);                   %electric flux of E1
 curve2 = calcFlux(E2, A2, theta);                   %electric flux of E2
@@ -31,5 +31,7 @@ hold on
 plot(theta, curve3, 'b-')
 hold on
 plot(theta, curve4, 'p-')
-
-
+title('Electric flux with constant E fields')
+ylabel('Electric Flux')
+xlabel('Theta')
+legend('E1', 'E2', 'E3', 'E4')
