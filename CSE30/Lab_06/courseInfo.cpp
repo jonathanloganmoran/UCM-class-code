@@ -27,12 +27,21 @@ int main() {
 	getline(file, line);
 	int num_courses = atoi(line);
 
+    int count = 0; // this is for finding the number of lines in a text file.
+    if ( file.is_open() ) {
+    	while (!file_in.eof()) {
+    	    getline(file_in, line);
+    	    count++;
+    	}
+    }
+    file_in.close();
+
 	Course my_courses[num_courses];
 	for (int i = 0; i < num_courses; i++) {
 		//read courses info
 		if (file.is_open()) {
 			while ( !file_in.eof() ) {
-    	    for (int i = 0; i < count; i++) {
+    	    for (int i = 0; i < count / 2; i++) {
     			getline(file_in, arr[i]);
     	    }
     	}
