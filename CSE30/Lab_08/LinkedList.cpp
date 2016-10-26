@@ -13,11 +13,22 @@ LinkedList::~LinkedList() {
 }
 
 void LinkedList::insertAtBack(int valueToInsert) {
-    Node* node = new Node();
-    node->val = valueToInsert;
-    node->next = NULL; //Null because this is the last node of the list
-    //TODO
-    
+    Node* newNode = new Node();
+    newNode->val = valueToInsert;
+    newNode->next = NULL; //Null because this is the last node of the list
+
+    //Case 1: Empty LinkedList (First and Last point to NULL)
+    if (first == NULL && last == NULL) {
+        //1. First and last point to the new node
+	first = newNode;
+	last = newNode;
+	return;
+    }
+    //Case 2: General Case
+    //1. Last->next points to the new node
+    last->next = newNode;
+    //2. Last points to the new node
+    last = newNode;
 }
 
 bool LinkedList::removeFromBack() {
@@ -64,11 +75,17 @@ bool LinkedList::removeFromBack() {
 void LinkedList::print() {
     // 1 -> 2 -> 3 -> 4 -> 5
     // print: 1,2,3,4,5
+
+    //check if list is empty
+    if (isEmpty()) {
+	return;
+    }
     Node *curr = first;
     while (curr->next != NULL) {
 	cout << curr->val << ",";
 	curr = curr->next;
     }
+    cout << curr->val;
 }
 
 bool LinkedList::isEmpty() {
@@ -79,10 +96,10 @@ int LinkedList::size() {
     if (isEmpty()) {
 	return 0;
     }
-    int nodeCount = 0;
+    int nodeCount = 1;// not empty, so we start at one
     Node *current = first;
     while (current->next != NULL) {
-	nodeCount++;
+	nodeCount++; // increment so long as we find an existing "next" pointer
         current = current->next;
     }
     return nodeCount;
@@ -93,7 +110,6 @@ void LinkedList::clear() {
 	return;
     }
     if (first == last) { // only one node
-	//TODO
 	delete first;
 	first = NULL;
 	last = NULL;
