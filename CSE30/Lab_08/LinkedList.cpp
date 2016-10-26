@@ -1,6 +1,5 @@
 #include <iostream>
 #include "LinkedList.h"
-
 using namespace std;
 
 LinkedList::LinkedList() {
@@ -135,17 +134,44 @@ void LinkedList::clear() {
 
 void LinkedList::insertAtFront(int valueToInsert) {
 
+    Node* newNode = new Node();
+    newNode->val = valueToInsert;
+    newNode->next = first; //first because new node will come before first node
 
+    //Case 1: Empty LinkedList (First and Last point to NULL)
+    if (first == NULL && last == NULL) {
+        //1. First and last point to the new node
+        first = newNode;
+        last = newNode;
+        return;
+    }
+    //Case 2: General Case
+    //1. First points to newNode
+    first = newNode;
 
 }
 
 bool LinkedList::removeFromFront() {
+    if (first == NULL) { //no node
+        return false;
+    }
+        //case 2
+    if (first == last) { //only one node
+        delete [] first; //why do we use 'delete [] first;' instead of 'delete first'?  
+                         //Could you put in catcourses comments? Thank you
+        //first and last now point to null
+        first = NULL;
+        last = NULL;
+        return true;
+    }
+    else { // case 3, general case
+	//1. Store next pointer in temp
+	Node *tempNext = first->next;
+        //2. Delete first node object
+        delete first;
 
-
-
-
-
+        //3. first points to next
+        first = tempNext;
+    }
 }
-
-
 
