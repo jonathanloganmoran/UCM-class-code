@@ -14,4 +14,6 @@ y1 = cos(x);
 y2 = sin(x);
 
 areaOfCos = trapezoidIntegral(x, y1)
+trapzCos = trapz(x, y1)
 areaOfSin = trapezoidIntegral(x, y2)
+trapzSin = trapz(x, y2)

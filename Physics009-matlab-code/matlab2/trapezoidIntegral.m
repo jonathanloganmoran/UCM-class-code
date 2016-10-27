@@ -15,6 +15,7 @@ function [ area ] = trapezoidIntegral(x, y)
 	sumInnerHeights = ((length(x)-1) * y) - sumEdgeHeights;
     else 
 	sumInnerHeights = (sum(y) - sumEdgeHeights);
+    end
     %area of curve using trapezoids
     area = deltaX/2 * (sumEdgeHeights + 2*sumInnerHeights);
 return
