@@ -9,7 +9,7 @@
 dx = .001;
 x = 0:dx:25;
 
-y = exp^(x);
+y = 2.718281828459.^(x);
 
 areaOfExp = trapezoidIntegral(x, y)
 
