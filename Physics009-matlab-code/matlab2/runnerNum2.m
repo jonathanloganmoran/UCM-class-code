@@ -12,6 +12,8 @@ dx2 = 1;
 dx3 = .5;
 dx4 = .25;
 
+y = 6;
+
 x1 = 0:dx1:10;
 y1 = [6 6 6 6 6 6];
 
@@ -24,15 +26,15 @@ y3 = [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6];
 x4 = 0:dx4:10;
 y4 = [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6];
 
-area1 = trapezoidIntegral(x1, y1)
+area1 = trapezoidIntegral(x1, y)
 trap1 = trapz(x1, y1)
 
-area2 = trapezoidIntegral(x2, y2)
+area2 = trapezoidIntegral(x2, y)
 trap2 = trapz(x2, y2)
 
-area3 = trapezoidIntegral(x3, y3)
+area3 = trapezoidIntegral(x3, y)
 trap3 = trapz(x3, y3)
 
-area4 = trapezoidIntegral(x4, y4)
+area4 = trapezoidIntegral(x4, y)
 trap4 = trapz(x4, y4)
 

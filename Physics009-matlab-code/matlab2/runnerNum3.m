@@ -7,6 +7,6 @@
 
 dx = 1;
 x = 0:dx:20;
-y = 4 * x;
+y = 4 .* x;
 
 area = trapezoidIntegral(x, y)
