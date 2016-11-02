@@ -8,9 +8,15 @@ for 2. Also talk about your result for 4 in the context of odd and even function
 
 
 My Responses
-The choice of dx is important because with smaller and smaller values yields more accurate results
+The choice of dx is important.  Smaller and smaller values yields more accurate results
+because we are adding up more and more smaller trapezoids.  If we use an infinitesimal amount
+of trapezoids, the area estimate becomes exact.
 
-For the even and odd functions, cos(x) is an even function and sin(x) is an odd function.  Since sin(x) is an odd function, it becomes negative from -pi/2 to pi/2 and thus the area cancels out to 0.  Since cos(x) is an even function, it doubles from -pi/2 to pi/2.
+For the even and odd functions, cos(x) is an even function and sin(x) is an odd function.  
+Since sin(x) is an odd function, it becomes negative from -pi/2 to 0 and is positive from 0 to pi/2.
+The area of sin(x) from -pi/2 to 0 and 0 to pi/2 are equal but opposite in sign, so they end up
+canceling each other out to a really small number close to zero, if not zero.
+Since cos(x) is an even function, it doubles from -pi/2 to pi/2.
 
 
 

@@ -1,0 +1,78 @@
+**NOTE** Answers to the questions can be found in responseQuestions.txt
+Output for question 2
+>> runnerNum2
+
+area1 =
+
+    48
+
+
+trap1 =
+
+    60
+
+
+area2 =
+
+    54
+
+
+trap2 =
+
+    60
+
+
+area3 =
+
+    57
+
+
+trap3 =
+
+    60
+
+
+area4 =
+
+   58.5000
+
+
+trap4 =
+
+    60
+
+Output for question 3
+>> runnerNum3
+
+area =
+
+   800
+
+Output for question 4
+>> runnerNum4
+
+areaOfCos =
+
+    2.0000
+
+
+trapzCos =
+
+    2.0000
+
+
+areaOfSin =
+
+  -5.9265e-04
+
+
+trapzSin =
+
+  -5.9265e-04
+
+Output for question 5
+>> runnerNum5
+
+areaOfExp =
+
+   7.2005e+10
