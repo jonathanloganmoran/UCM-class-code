@@ -1,17 +1,17 @@
 #include <iostream>
-#include "LinkedList.h"
+#include "LinkedList_char.h"
 using namespace std;
 
-LinkedList::LinkedList() {
+LinkedList_char::LinkedList_char() {
     first = NULL;
     last = NULL;
 }
 
-LinkedList::~LinkedList() {
+LinkedList_char::~LinkedList_char() {
     clear();
 }
 
-void LinkedList::insertAtBack(int valueToInsert) {
+void LinkedList_char::insertAtBack(char valueToInsert) {
     Node* newNode = new Node();
     newNode->val = valueToInsert;
     newNode->next = NULL; //Null because this is the last node of the list
@@ -30,7 +30,7 @@ void LinkedList::insertAtBack(int valueToInsert) {
     last = newNode;
 }
 
-bool LinkedList::removeFromBack() {
+bool LinkedList_char::removeFromBack() {
 	//case 1
     if (first == NULL) { //no node
 	return false;
@@ -71,7 +71,7 @@ bool LinkedList::removeFromBack() {
 
 }
 
-void LinkedList::print() {
+void LinkedList_char::print() {
     // 1 -> 2 -> 3 -> 4 -> 5
     // print: 1,2,3,4,5
 
@@ -84,14 +84,14 @@ void LinkedList::print() {
 	cout << curr->val << ",";
 	curr = curr->next;
     }
-    cout << curr->val;
+    cout << curr->val << endl;
 }
 
-bool LinkedList::isEmpty() {
+bool LinkedList_char::isEmpty() {
     return first == NULL;
 }
 
-int LinkedList::size() {
+int LinkedList_char::size() {
     if (isEmpty()) {
 	return 0;
     }
@@ -104,7 +104,7 @@ int LinkedList::size() {
     return nodeCount;
 }
 
-void LinkedList::clear() {
+void LinkedList_char::clear() {
     if (first == NULL) { // no node
 	return;
     }
@@ -132,7 +132,7 @@ void LinkedList::clear() {
 
 //For exercise 2:
 
-void LinkedList::insertAtFront(int valueToInsert) {
+void LinkedList_char::insertAtFront(char valueToInsert) {
 
     Node* newNode = new Node();
     newNode->val = valueToInsert;
@@ -151,7 +151,7 @@ void LinkedList::insertAtFront(int valueToInsert) {
     return;
 }
 
-bool LinkedList::removeFromFront() {
+bool LinkedList_char::removeFromFront() {
     if (first == NULL) { //no node
         return false;
     }

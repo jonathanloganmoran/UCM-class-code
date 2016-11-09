@@ -12,8 +12,10 @@ int main()
     } catch (int error) {
 	if (error == 0) {
 	    //catch exception from dequeue()
+	    cout << "Error from dequeue()" << endl;
 	} else if (error == 1) {
 	    //catch exception from front()
+	    cout << "Error from front()" << endl;
 	}
     }
 

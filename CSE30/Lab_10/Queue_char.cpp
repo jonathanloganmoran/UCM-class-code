@@ -1,26 +1,26 @@
 //NOTE:  enqueue(x), or push() is insertion for a queue (inserted at rear end)
 //dequeue(), or pop() is a removal from the queue (removed from front end)
 #include <iostream>
-#include "Queue.h"
+#include "Queue_char.h"
 using namespace std;
 
-Queue::Queue():LinkedList() {}
+Queue_char::Queue_char():LinkedList_char() {}
 
-Queue::~Queue() {}
+Queue_char::~Queue_char() {}
 
-void Queue::enqueue(int value) {
+void Queue_char::enqueue(char value) {
     //call linkedlist function
     insertAtBack(value);
     return;
 }
 
-int Queue::dequeue() {
+char Queue_char::dequeue() {
     //handle exception
     if (isEmpty()) {
 	throw 0;
     }
 
-    int val_to_remove = first->val;
+    char val_to_remove = first->val;
  
     //call linkedlist function
     removeFromFront();
@@ -29,7 +29,7 @@ int Queue::dequeue() {
 }
 
 
-int& Queue::front() {
+char& Queue_char::front() {
     
     //handle exception
     if (isEmpty()) {
@@ -39,14 +39,4 @@ int& Queue::front() {
     //call linkedlist function
     return first->val;
 }
-
-
-
-
-
-
-
-
-
-
 

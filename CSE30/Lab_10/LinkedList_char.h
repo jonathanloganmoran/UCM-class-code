@@ -6,18 +6,18 @@ using namespace std;
 // Representation of an element in the linked list
 struct Node 
 {
-    int val; // Value of the node
+    char val; // Value of the node
     Node *next; // Pointer to the next node
 };
 
-class LinkedList 
+class LinkedList_char 
 {
     // Public Functions/Variables
     public:
         /* IMPLEMENT THESE FUNCTIONS FOR EXERCISE1 */
-        LinkedList(); // Constructor
-        ~LinkedList(); // Destructor
-        void insertAtBack(int valueToInsert);
+        LinkedList_char(); // Constructor
+        ~LinkedList_char(); // Destructor
+        void insertAtBack(char valueToInsert);
         bool removeFromBack();
         void print();
         bool isEmpty();
@@ -25,7 +25,7 @@ class LinkedList
         void clear();
 
         /* IMPLEMENT THSES FUNCTIONS FOR EXERCISE2 */
-        void insertAtFront(int valueToInsert);
+        void insertAtFront(char valueToInsert);
         bool removeFromFront();
 
     // Private Functions/Variables
