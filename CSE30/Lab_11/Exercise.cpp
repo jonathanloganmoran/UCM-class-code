@@ -6,9 +6,14 @@ using namespace std;
 int main()
 {
     BTree myTree;
+    cout << "Initialized Btree" << endl;
 
+    cout << "inserting 10" << endl;
     myTree.insert(10);
+
+    cout << "inserting 14" << endl;
     myTree.insert(14);
+    cout << "inserting 6" << endl;
     myTree.insert(6);
     myTree.insert(5);
     myTree.insert(8);
