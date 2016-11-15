@@ -6,14 +6,9 @@ using namespace std;
 int main()
 {
     BTree myTree;
-    cout << "Initialized Btree" << endl;
 
-    cout << "inserting 10" << endl;
     myTree.insert(10);
-
-    cout << "inserting 14" << endl;
     myTree.insert(14);
-    cout << "inserting 6" << endl;
     myTree.insert(6);
     myTree.insert(5);
     myTree.insert(8);
@@ -21,6 +16,7 @@ int main()
     myTree.insert(18);
 
     Node *tempNode;
+    cout << endl;
     cout << "Root has key: ";
     cout << myTree.BTree_root()->key_value << endl;
     cout << "Left child of root has key: ";
