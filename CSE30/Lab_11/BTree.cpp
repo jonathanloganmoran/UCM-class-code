@@ -65,10 +65,8 @@ Node *BTree::search(int key, Node *leaf) {
   } else {
       //if key == leaf->key_value, return leaf
       if (key == leaf->key_value) return leaf;
-      //if key < leaf->key_value, search left node
-      if (key < leaf->key_value) search(key, leaf->left);
-      //if key > leaf->key_value, search right node
-      if (key > leaf->key_value) search(key, leaf->right);
+      else if (key < leaf->key_value) search(key, leaf->left);
+      else if (key > leaf->key_value) search(key, leaf->right);
   }
 }
 
