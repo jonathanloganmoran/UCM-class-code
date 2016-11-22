@@ -28,19 +28,41 @@ HTable::HTable(int t_size) {
 }
 
 int HTable::hash(int &k) {
-  
+  int index = k % max_size;
+  return index;
+}
 
-
-
-
+int HTable::rehash(int &k) {
+  int index = (k+1) % max_size;
+  return index;
 }
 
 
+int HTable::add(data &d) {
+
+  if (numel == max_size) {
+    //Table is full
+    return -1;
+  } else {
+    //find the correct index to add data
+    //hint: use for/while loop here
+
+  }
+}
+
+int HTable::remove(data &d) {
+
+  if (numel == 0) {
+    //Table is empty
+    return -1;
+  } else {
+      //find the correct index to remove data
+      //hint: use for/while loop here
+
+  }
 
 
-
-
-
+}
 
 
 
