@@ -46,7 +46,28 @@ int HTable::add(data &d) {
   } else {
     //find the correct index to add data
     //hint: use for/while loop here
+      
+      for (int i = 0; i < max_size; i++) {
+	int index = hash(i);
+	if (dt[index].key == -1) {
+	  dt[index] = d;
+	  numel++;
+	  return 0;
+	} else if (dt[index].key != -1) {
+	    for (int j = i; j < max_size; j++) {
+	      int reHashIdx = rehash(j);
+	      if (dt[reHashIdx].key == -1) {
+		dt[reHashIdx] = d;
+		numel++;
+		return 0;
+	      }
+	    }
+	    return -1;
+	}
 
+
+
+      }
   }
 }
 
