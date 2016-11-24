@@ -100,7 +100,7 @@ for (int i = 0; i < max_size; i++) {
   cout << i << " -> " << dt[i].key << " " << dt[i].value << endl;
 }
 
-
+cout << "There are " << numel << " data elements in the table" << endl;
 
 
 
