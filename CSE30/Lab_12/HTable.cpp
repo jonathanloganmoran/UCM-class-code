@@ -79,14 +79,35 @@ int HTable::remove(data &d) {
   } else {
       //find the correct index to remove data
       //hint: use for/while loop here
-
+      for (int i = 0; i < max_size; i++) {
+	int index = rehash(i);
+	if (dt[index].key == d.key) {
+	  dt[index].key = -1;
+	  dt[index].value = "N/A";
+	  numel--;
+	  return 0;
+	}
+      }
+      return -1;
   }
+}
 
 
+void HTable::output() {
+
+cout << "Table of Contents:" << endl;
+for (int i = 0; i < max_size; i++) {
+  cout << i << " -> " << dt[i].key << " " << dt[i].value << endl;
 }
 
 
 
+
+
+
+
+
+}
 
 
 
