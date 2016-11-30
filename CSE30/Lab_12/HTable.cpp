@@ -62,15 +62,27 @@ int HTable::add(data &d) {
 	// if there is a collision, the below will execute
 
 	int newIndex = rehash(inputKey); // get new index (+1)
-	while (newIndex < max_size) {
+	int i = newIndex;
+
+	while (i < max_size) {
 	    //if there is an open spot
-	    if (dt[newIndex].key == -1) {
-		dt[newIndex].key = inputKey;
-		dt[newIndex].value = inputValue;
+	    if (dt[i].key == -1) {
+		dt[i].key = inputKey;
+		dt[i].value = inputValue;
 		numel++;
 		return 0;
 	    }
-	    newIndex++;
+	    i++;
+	}
+
+	//now, for the wrap around
+	for (int j = 0; j < newIndex; j++) {
+	    if (dt[i].key == -1) {
+		dt[i].key = inputKey;
+		dt[i].value = inputValue;
+		numel++;
+		return 0;
+	    }
 	}
 
 	//If we get here, then everything is filled up, so
@@ -87,14 +99,15 @@ int HTable::remove(data &d) {
       //find the correct index to remove data
       //hint: use for/while loop here
       for (int i = 0; i < max_size; i++) {
-	int index = rehash(i);
-	if (dt[index].key == d.key) {
-	  dt[index].key = -1;
-	  dt[index].value = "N/A";
-	  numel--;
+	if (dt[i].key == d.key) { // if key is found, remove it
+	  dt[i].key = -1;
+	  dt[i].value = "N/A";
+	  numel--; //element removed
 	  return 0;
 	}
       }
+
+      //if we get here, then nothing was removed.
       return -1;
   }
 }
