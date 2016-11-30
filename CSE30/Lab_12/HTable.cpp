@@ -40,35 +40,42 @@ int HTable::rehash(int &k) {
 
 int HTable::add(data &d) {
 
-  if (numel == max_size) {
-    //Table is full
-    return -1;
-  } else {
-    //find the correct index to add data
-    //hint: use for/while loop here
-      
-      for (int i = 0; i < max_size; i++) {
-	int index = hash(i);
+    if (numel == max_size) {
+        //Table is full
+        return -1;
+    } else {
+        //find the correct index to add data
+        //hint: use for/while loop here
+	int inputKey = d.key; // key from input of this method
+	string inputValue = d.value; // value from input of this method
+
+	int index = hash(inputKey); //index to put data in
+	
+	//If there is no collision
 	if (dt[index].key == -1) {
-	  dt[index] = d;
-	  numel++;
-	  return 0;
-	} else if (dt[index].key != -1) {
-	    for (int j = i; j < max_size; j++) {
-	      int reHashIdx = rehash(j);
-	      if (dt[reHashIdx].key == -1) {
-		dt[reHashIdx] = d;
-		numel++;
-		return 0;
-	      }
-	    }
-	    return -1;
+	    dt[index].key = inputKey;
+	    dt[index].value = inputValue;
+	    numel++;
+	    return 0;
 	}
 
+	// if there is a collision, the below will execute
 
+	int newIndex = rehash(inputKey); // get new index (+1)
+	while (newIndex < max_size) {
+	    //if there is an open spot
+	    if (dt[newIndex].key == -1) {
+		dt[newIndex].key = inputKey;
+		dt[newIndex].value = inputValue;
+		numel++;
+		return 0;
+	    }
+	    newIndex++;
+	}
 
-      }
-  }
+	//If we get here, then everything is filled up, so
+	return -1;
+    }
 }
 
 int HTable::remove(data &d) {
