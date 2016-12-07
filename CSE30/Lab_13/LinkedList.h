@@ -150,26 +150,26 @@ int LinkedList<T>::size() {
 template<class T>
 void LinkedList<T>::clear() {
     if (first == NULL) { // no node
-    return;
+        return;
     }
     if (first == last) { // only one node
-    delete first;
-    first = NULL;
-    last = NULL;
+        delete first;
+        first = NULL;
+        last = NULL;
     } else {
 
-    //1. Second points to First->next
-    Node<T> *second = first->next;
-    //2. Delete first
-    delete first;
-    //3. first points to Second 
-    first = second;
-    //4. Repeat until Second is NULL
-    while (second != NULL) {
-        second = first->next;
+        //1. Second points to First->next
+        Node<T> *second = first->next;
+        //2. Delete first
         delete first;
+        //3. first points to Second 
         first = second;
-    }
+        //4. Repeat until Second is NULL
+        while (second != NULL) {
+            second = first->next;
+            delete first;
+            first = second;
+        }
     }
 }
 
